@@ -66,8 +66,7 @@ pub trait Database: Sized + Clone + Send + Sync + 'static {
 
     async fn add_records(&self, user: &User, record: &[Record<EncryptedData>]) -> DbResult<()>;
     async fn next_records(
-        &self,
-        user: &User,
+        &self, user: &User,
         host: HostId,
         tag: String,
         start: Option<RecordIdx>,

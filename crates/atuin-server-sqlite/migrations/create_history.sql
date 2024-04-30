@@ -1,0 +1,9 @@
+CREATE TABLE history (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    client_id TEXT NOT NULL UNIQUE,
+    user_id INTEGER NOT NULL,
+    hostname TEXT NOT NULL,
+    timestamp DATETIME NOT NULL,
+    data TEXT NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
